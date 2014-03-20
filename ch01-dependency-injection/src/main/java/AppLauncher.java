@@ -1,9 +1,7 @@
-package com.ninjaapps.codes.p_28_di_and_csv;
-
-import com.ninjaapps.codes.p_28_di_and_csv.model.Account;
-import com.ninjaapps.codes.p_28_di_and_csv.service.AccountService;
+import model.Account;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import service.AccountService;
 
 import java.util.List;
 
@@ -13,7 +11,7 @@ import java.util.List;
 public class AppLauncher {
     public static void main(String[] args) throws Exception {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("p_28_di_and_csv/context.xml");
+                new ClassPathXmlApplicationContext("context.xml");
 
         AccountService accountService =
                 context.getBean(AccountService.class);

@@ -1,7 +1,7 @@
-package com.ninjaapps.codes.p_28_di_and_csv.service;
+package service;
 
-import com.ninjaapps.codes.p_28_di_and_csv.dao.IAccountDao;
-import com.ninjaapps.codes.p_28_di_and_csv.model.Account;
+import dao.IAccountDao;
+import model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

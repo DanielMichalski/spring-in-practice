@@ -1,6 +1,7 @@
-package com.ninjaapps.codes.p_28_di_and_csv.dao;
+package dao;
 
-import com.ninjaapps.codes.p_28_di_and_csv.model.Account;
+
+import model.Account;
 
 import java.util.List;
 

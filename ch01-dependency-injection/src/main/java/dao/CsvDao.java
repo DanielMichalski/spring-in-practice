@@ -1,6 +1,6 @@
-package com.ninjaapps.codes.p_28_di_and_csv.dao;
+package dao;
 
-import com.ninjaapps.codes.p_28_di_and_csv.model.Account;
+import model.Account;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -27,7 +27,7 @@ public class CsvDao {
         SimpleDateFormat sdf = new SimpleDateFormat("MMddyyy");
 
         InputStream is = getClass()
-                .getResourceAsStream("/p_28_di_and_csv/accounts.csv");
+                .getResourceAsStream("/accounts.csv");
 
         BufferedReader br =
                 new BufferedReader(new InputStreamReader(is));

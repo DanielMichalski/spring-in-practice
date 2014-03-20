@@ -1,4 +1,4 @@
-package com.ninjaapps.codes.p_28_di_and_csv.model;
+package model;
 
 import java.math.BigDecimal;
 import java.util.Date;
