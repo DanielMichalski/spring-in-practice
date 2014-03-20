@@ -1,7 +1,7 @@
-package dao;
+package com.springinpractice.ch01.dao;
 
 
-import model.Account;
+import com.springinpractice.ch01.model.Account;
 
 import java.util.List;
 

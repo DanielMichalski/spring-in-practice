@@ -1,7 +1,7 @@
-package service;
+package com.springinpractice.ch01.service;
 
-import dao.IAccountDao;
-import model.Account;
+import com.springinpractice.ch01.dao.IAccountDao;
+import com.springinpractice.ch01.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

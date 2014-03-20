@@ -1,7 +1,9 @@
-import model.Account;
+package com.springinpractice.ch01;
+
+import com.springinpractice.ch01.model.Account;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import service.AccountService;
+import com.springinpractice.ch01.service.AccountService;
 
 import java.util.List;
 
