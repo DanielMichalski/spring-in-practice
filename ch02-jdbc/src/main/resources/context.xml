@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="db.properties" />
+    <context:property-placeholder location="db.properties"/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-          destroy-method="close">
-        <property name="driverClassName" value="${dataSource.DriverClassName}" />
-        <property name="url" value="${dataSource.url}" />
-        <property name="username" value="${dataSource.username}" />
-        <property name="password" value="${dataSource.password}" />
-    </bean>
+          destroy-method="close"
+          p:driverClassName="${dataSource.DriverClassName}"
+          p:url="${dataSource.url}"
+          p:username="${dataSource.username}"
+          p:password="${dataSource.password}"/>
 
-    <bean id="accountDao" class="com.spriginpractice.ch02.dao.JdbcAccountDao">
-        <property name="dataSource" ref="dataSource" />
-    </bean>
+    <bean id="accountDao" class="com.springinpractice.ch02.dao.JdbcAccountDao"
+          p:dataSource-ref="dataSource"/>
+
+    <bean id="accountService" class="com.springinpractice.ch02.service.AccountService"
+          p:jdbcAccountDao-ref="accountDao"/>
 
 </beans>

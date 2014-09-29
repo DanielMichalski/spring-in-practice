@@ -12,6 +12,7 @@
     <modules>
         <module>ch01-dependency-injection</module>
         <module>ch02-jdbc</module>
+        <module>ch03-web-forms</module>
     </modules>
 
 </project>

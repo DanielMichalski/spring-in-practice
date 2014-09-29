@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="account1" class="com.springinpractice.ch02.model.Account"
+         c:accountNo="1000"
+         c:balance="1000.20"
+         c:lastPaidOn-ref="date"/>
+
+    <bean id="account2" class="com.springinpractice.ch02.model.Account"
+          c:_0="1200"
+          c:_1="5000.76"
+          c:_2-ref="date"/>
+
+    <bean id="date" class="java.util.Date"/>
+</beans>

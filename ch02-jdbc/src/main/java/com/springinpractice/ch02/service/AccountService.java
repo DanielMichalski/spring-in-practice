@@ -1,8 +1,7 @@
-package com.springinpractice.ch01.service;
+package com.springinpractice.ch02.service;
 
-import com.springinpractice.ch01.dao.IAccountDao;
-import com.springinpractice.ch01.model.Account;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.springinpractice.ch02.dao.IJdbcAccountDao;
+import com.springinpractice.ch02.model.Account;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -13,13 +12,11 @@ import java.util.*;
  */
 @Service
 public class AccountService {
-
-    @Autowired
-    private IAccountDao accountDao;
+    private IJdbcAccountDao jdbcAccountDao;
 
     public List<Account> findDeliquentAccounts() throws Exception {
         ArrayList<Account> delinquentAccounts = new ArrayList<>();
-        List<Account> accounts = accountDao.findAllAccounts();
+        List<Account> accounts = jdbcAccountDao.findAllAccounts();
 
         Date thirtyDaysAgo = daysAgo(30);
         for (Account account : accounts) {
@@ -39,5 +36,9 @@ public class AccountService {
         GregorianCalendar gc = new GregorianCalendar();
         gc.add(Calendar.DATE, -days);
         return gc.getTime();
+    }
+
+    public void setJdbcAccountDao(IJdbcAccountDao jdbcAccountDao) {
+        this.jdbcAccountDao = jdbcAccountDao;
     }
 }
